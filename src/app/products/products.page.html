@@ -1,32 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-     Home
-    </ion-title>
+    <ion-title>products</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-<!-- <ion-grid>
-  <ion-row>
-        <ion-card *ngFor="let list of productLists ">
-    <img src={{list.productImg}}>
+<ion-content>
+  <ion-card *ngFor="let list of productLists ">
+    <img width="auto" src={{list.productImg}}>
     <ion-card-header>
       <ion-card-subtitle></ion-card-subtitle>
       <ion-card-title>{{list. productName}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      {{list.productQuantity}}<br>
-      {{list.productPrice}}<br>
+      Quantity: {{list.productQuantity}}<br>
+      Price: R{{list.productPrice}}.00<br>
 
       <ion-button ion-button clear color="medium" shape="round" slot="end">
         ADD TO CART
         <ion-icon name="chevron-forward-circle-sharp" slot="end"></ion-icon>
       </ion-button>
     </ion-card-content>
-   </ion-card>
-  </ion-row>
-</ion-grid> -->
+  </ion-card>
+
 
 </ion-content>
