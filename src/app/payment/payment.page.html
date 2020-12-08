@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="" fill="clear" color="warning">
+      <ion-icon name="arrow-undo-outline"></ion-icon>
+    </ion-button>
+    <ion-title color="warning">Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="https://s3-prod.chicagobusiness.com/CreditCards.jpg">
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Credit Card Details</ion-card-subtitle>
+              <ion-item>
+                <ion-label position="floating">Card Holder</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label position="floating">Card Number</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label ><b>Expiry date:</b></ion-label><br>
+                <ion-input  placeholder="Month"></ion-input><b>/</b>
+                <ion-select placeholder="Year">
+                  <ion-select-option >2020</ion-select-option>
+                  <ion-select-option >2021</ion-select-option>
+                  <ion-select-option >2022</ion-select-option>
+                  <ion-select-option >2023</ion-select-option>
+                  <ion-select-option >2024</ion-select-option>
+                  <ion-select-option >2025</ion-select-option>
+                  <ion-select-option >2026</ion-select-option>
+                  <ion-select-option >2027</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">CVV</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button ion-button clear color="warning" fill="outline" expand="block" shape="round" slot="end" routerLink="/checkout">
+                Confirm
+                <ion-icon name="chevron-forward-circle-sharp" slot="end"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+          
+          </ion-card>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

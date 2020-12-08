@@ -1,11 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>products</ion-title>
+    <ion-title color="warning">Products</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let list of productLists ">
+<ion-content class="ion-no-margin">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning" (click)="openCart()" routerLink="/cart" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card class="ion-no-margin" *ngFor="let list of productLists ">
     <img width="auto" src={{list.productImg}}>
     <ion-card-header>
       <ion-card-subtitle></ion-card-subtitle>
@@ -14,9 +21,9 @@
 
     <ion-card-content>
       Quantity: {{list.productQuantity}}<br>
-      Price: R{{list.productPrice}}.00<br>
+      Price: {{list.productPrice | currency: 'R'}}<br>
 
-      <ion-button ion-button clear color="medium" shape="round" slot="end">
+      <ion-button ion-button clear color="warning" shape="round" slot="end" (click)="addToCart()">
         ADD TO CART
         <ion-icon name="chevron-forward-circle-sharp" slot="end"></ion-icon>
       </ion-button>

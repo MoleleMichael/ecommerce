@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="" fill="clear" color="warning">
+      <ion-icon name="arrow-undo-outline"></ion-icon>
+    </ion-button>
+    <ion-title color="warning">Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-item>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Shipping Address</ion-card-subtitle>
+              <ion-card-title>Molele Michael</ion-card-title>
+              <ion-input placeholder="Address Line 1"></ion-input>
+              <ion-input placeholder="Address Line 2"></ion-input>
+              <ion-input placeholder="City"></ion-input>
+              <ion-input placeholder="State"></ion-input>
+              <ion-input placeholder="Zip Code"></ion-input>
+            </ion-card-header>
+          </ion-card>
+        </ion-item>
+
+        <ion-item>
+          <ion-button size="medium" color="light" expand="block"  routerLink="/payment">
+            <ion-icon name="card-outline" color="warning"></ion-icon>
+            Payment Method
+            <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
